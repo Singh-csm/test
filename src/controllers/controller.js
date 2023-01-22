@@ -24,7 +24,7 @@ const createCard = async function (req, res) {
     res.send({data: cardCreated});
 };
 
-const getCards = async function (req, res) {
+const getCards = async (req, res)=> {
     const allCards = await cardModel.find().populate('customerID');
     res.send({data: allCards});
 };
